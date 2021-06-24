@@ -328,6 +328,33 @@
         ]
     },
     {
+        "id": "smagrodorna",
+        "title": "Små Grodorna",
+        "melody": "Små Grodorna",
+        "lang": "Svenska",
+        "text": [
+            "Små grodorna, små grodorna är lustiga att se.",
+            "Små grodorna, små grodorna är lustiga att se.",
+            "Ej öron, ej öron, ej svansar hava de.",
+            "Ej öron, ej öron, ej svansar hava de.",
+            "Kou ack ack ack, kou ack ack ack,",
+            "kou ack ack ack ack kaa.",
+            "Kou ack ack ack, kou ack ack ack,",
+            "kou ack ack ack ack kaa.",
+            "",
+            "This roughly translates as:",
+            "",
+            "The small frogs, the small frogs are funny to see.",
+            "The small frogs, the small frogs are funny to see.",
+            "No ears, no ears, no tails have they.",
+            "No ears, no ears, no tails have they.",
+            "Quack quack quack, quack quack quack,",
+            "Quack quack quack quacka.",
+            "Quack quack quack, quack quack quack,",
+            "Quack quack quack quacka."
+        ]
+    },
+    {
         "id": "strejk",
         "title": "Strejken på pripps",
         "melody": "I natt jag drömde",
@@ -388,6 +415,26 @@
             "Och när vi vaknar, vi sjunger en bit,",
             "och korkar upp Skånes aquavit.",
             "Ja skål för alla vikingar som kom hit!"
+        ]
+    },
+    {
+        "id": "wish",
+        "title": "Wish I Could Tie",
+        "melody": "Hej tomtegubbar",
+        "lang": "English",
+        "text": [
+            "Wish I could tie a piece of string,",
+            "a-round the snaps fore I drink it!",
+            "Wish I could tie a piece of string,",
+            "a-round the snaps fore I drink it!",
+            "",
+            "When it goes down,",
+            "I pull the string,",
+            "And thus reuse it,",
+            "that’s why I sing.",
+            "",
+            "Wish I could tie a piece of string,",
+            "a-round the snaps fore I drink it!"
         ]
     }
 ]
