@@ -1,0 +1,41 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: midsommar
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: midsommar
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: midsommar
+spec:
+  backend:
+    serviceName: midsommar
+    servicePort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: midsommar
+spec:
+  selector:
+    matchLabels:
+      app: midsommar
+  template:
+    metadata:
+      labels:
+        app: midsommar
+    spec:
+      containers:
+      - image: mjam/midsommar:latest
+        name: midsommar
+        ports:
+        - containerPort: 3000
+          protocol: TCP
