@@ -1,0 +1,9 @@
+# Docker
+/.git
+/.gitignore
+/Dockerfile
+
+# .gitignore
+node_modules
+/.svelte-kit
+/package
