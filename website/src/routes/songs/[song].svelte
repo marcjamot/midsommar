@@ -22,18 +22,37 @@
   let song = songs.find((s) => s.id === songId);
 </script>
 
-<div class="title">
-  <h3>{song.title}</h3>
+<div class="song">
+  <div class="title">
+    <h3>{song.title}</h3>
+  </div>
+
+  <div class="metadata">
+    Melody: <span>{song.melody}</span><br />
+    Language: <span>{song.lang}</span>
+  </div>
+
+  <div class="text">
+    {#each song.text as line}
+      {#if line === ""}
+        <br />
+      {:else}
+        <p>{line}</p>
+      {/if}
+    {/each}
+  </div>
 </div>
 
-<div class="metadata">
-  Melody: <p>{song.melody}</p>
-  Language:
-  <p>{song.lang}</p>
-</div>
-
-<div class="text">
-  {#each song.text as line}
-    <p>{line}</p>
-  {/each}
-</div>
+<style>
+  .song {
+    margin: 16px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .text {
+    margin-top: 16px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+</style>

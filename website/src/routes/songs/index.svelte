@@ -15,9 +15,30 @@
 </script>
 
 <script lang="ts">
+  import SongC from "$lib/components/Song.svelte";
+
   export let songs: Song[];
 </script>
 
-{#each songs as song}
-  <a href="/songs/{song.id}"><p>{song.title}</p></a>
-{/each}
+<div class="songs">
+  <div>
+    {#each songs as song}
+      <div class="song">
+        <SongC {song} />
+      </div>
+    {/each}
+  </div>
+</div>
+
+<style>
+  .songs {
+    display: flex;
+    justify-content: center;
+  }
+  .songs > div {
+    display: block;
+  }
+  .song {
+    margin-top: 32px;
+  }
+</style>

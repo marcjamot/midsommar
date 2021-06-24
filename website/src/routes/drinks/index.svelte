@@ -1,7 +1,6 @@
 <script context="module" lang="ts">
   import type { Load } from "@sveltejs/kit";
   import type { Drink } from "$lib/models";
-  import DrinkC from "$lib/components/Drink.svelte";
 
   export const load: Load = async ({ fetch }) => {
     const drinks: Drink[] = await (await fetch("/drinks.json")).json();
@@ -16,6 +15,8 @@
 </script>
 
 <script lang="ts">
+  import DrinkC from "$lib/components/Drink.svelte";
+
   export let drinks: Drink[];
 </script>
 
