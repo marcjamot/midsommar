@@ -16,8 +16,6 @@
   <slot />
 </main>
 
-
-
 <style>
   header {
     width: 100vw;
