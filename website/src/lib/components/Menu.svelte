@@ -25,4 +25,10 @@
     display: flex;
     justify-content: space-evenly;
   }
+
+  nav > * {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
 </style>
