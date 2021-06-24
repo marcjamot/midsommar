@@ -4,15 +4,19 @@
 </div>
 
 <style>
-  h1,
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+  }
+
   h2 {
     color: #fff;
   }
 
   .title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 </style>

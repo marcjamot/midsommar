@@ -1,10 +1,7 @@
 <script context="module" lang="ts">
-  interface Drink {
-    title: string;
-    booze: string;
-  }
-
   import type { Load } from "@sveltejs/kit";
+  import type { Drink } from "$lib/models";
+  import DrinkC from "$lib/components/Drink.svelte";
 
   export const load: Load = async ({ fetch }) => {
     const drinks: Drink[] = await (await fetch("/drinks.json")).json();
@@ -22,7 +19,25 @@
   export let drinks: Drink[];
 </script>
 
-{#each drinks as drink}
-  <h3>{drink.title}</h3>
-  <p>{drink.booze}</p>
-{/each}
+<div class="drinks">
+  <div>
+    {#each drinks as drink}
+      <div class="drink">
+        <DrinkC {drink} />
+      </div>
+    {/each}
+  </div>
+</div>
+
+<style>
+  .drinks {
+    display: flex;
+    justify-content: center;
+  }
+  .drinks > div {
+    display: block;
+  }
+  .drink {
+    margin-top: 32px;
+  }
+</style>

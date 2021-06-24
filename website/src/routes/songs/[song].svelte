@@ -1,13 +1,6 @@
 <script context="module" lang="ts">
-  interface Song {
-    id: string;
-    title: string;
-    melody: string;
-    lang: string;
-    text: string[];
-  }
-
   import type { Load } from "@sveltejs/kit";
+  import type { Song } from "$lib/models";
 
   export const load: Load = async ({ fetch, page }) => {
     const songs: Song[] = await (await fetch("/songs.json")).json();
