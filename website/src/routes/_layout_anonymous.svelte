@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Title from "$lib/components/Title.svelte";
   import { USER_STORE } from "$lib/user_store";
 
   let name = "";
@@ -13,6 +14,39 @@
   }
 </script>
 
-Enter name:
-<input type="text" bind:value={name} />
-<button on:click={login}>🦄</button>
+<header><Title /></header>
+
+<main>
+  <div class="login">
+    <p>Enter name:</p>
+    <input type="text" bind:value={name} />
+    <button on:click={login}>🦄</button>
+  </div>
+</main>
+
+<style>
+  header {
+    margin: 16px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login > * {
+    margin: 8px;
+  }
+
+  button {
+    font-size: 4rem;
+  }
+</style>
