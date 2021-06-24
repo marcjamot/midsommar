@@ -6,24 +6,24 @@
   import LayoutAnonymous from "./_layout_anonymous.svelte";
   import LayoutUser from "./_layout_user.svelte";
 
-  $: user = $USER_STORE;
+  // $: user = $USER_STORE;
 
-  onMount(() => {
-    if (!user) {
-      USER_STORE.set(window.localStorage.getItem("user"));
-    }
+  // onMount(() => {
+  //   if (!user) {
+  //     USER_STORE.set(window.localStorage.getItem("user"));
+  //   }
 
-    if (user && $page.path === "/") {
-      goto("/chat");
-    }
-    if (!user && $page.path !== "/") {
-      goto("/");
-    }
-  });
+  //   if (user && $page.path === "/") {
+  //     goto("/chat");
+  //   }
+  //   if (!user && $page.path !== "/") {
+  //     goto("/");
+  //   }
+  // });
 </script>
 
-{#if user}
-  <LayoutUser><slot /></LayoutUser>
-{:else}
+<!-- {#if user} -->
+<LayoutUser><slot /></LayoutUser>
+<!-- {:else}
   <LayoutAnonymous />
-{/if}
+{/if} -->

@@ -12,10 +12,10 @@
 </script>
 
 <nav class="menu">
-  <a href="/chat">Chat</a>
+  <!-- <a href="/chat">Chat</a> -->
   <a href="/drinks">Drinks</a>
   <a href="/songs">Songs</a>
-  <span on:click={logout}>Log out</span>
+  <!-- <span on:click={logout}>Log out</span> -->
 </nav>
 
 <style>
