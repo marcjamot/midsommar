@@ -1,10 +1,14 @@
-<script context="module" lang="ts">
-  import type { Load } from "@sveltejs/kit";
+<main>
+  <span>🦄</span>
+</main>
 
-  export const load: Load = async ({ fetch, page }) => {
-    return {
-      status: 307,
-      redirect: "/songs",
-    };
-  };
-</script>
+<style>
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    font-size: 10rem;
+  }
+</style>
